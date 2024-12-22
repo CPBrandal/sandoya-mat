@@ -1,4 +1,5 @@
 // Home.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -6,12 +7,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function Home() {
   return (
     <div className="Home">
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-tertiary border-bottom border-2 border-body-secondary">
         <Container>
           {/* Replace href with as={Link} + to */}
           <Navbar.Brand className='fs-1' as={Link} to="/">
@@ -22,9 +24,7 @@ export function Home() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-3">
               {/* Home link */}
-              <Nav.Link className='fs-3' as={Link} to="/">
-                Hjem
-              </Nav.Link>
+
 
               {/* Liv link */}
               <Nav.Link className='fs-3' as={Link} to="/liv">
@@ -51,6 +51,7 @@ export function Home() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+    
     </div>
   );
 }
