@@ -14,25 +14,25 @@ export function Home() {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           {/* Replace href with as={Link} + to */}
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand className='fs-1' as={Link} to="/">
             Sandøya Mat
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="ms-auto gap-3">
               {/* Home link */}
-              <Nav.Link as={Link} to="/">
+              <Nav.Link className='fs-3' as={Link} to="/">
                 Hjem
               </Nav.Link>
 
               {/* Liv link */}
-              <Nav.Link as={Link} to="/liv">
+              <Nav.Link className='fs-3' as={Link} to="/liv">
                 Liv på Brygga
               </Nav.Link>
 
               {/* Dropdown items */}
-              <NavDropdown title="Mer" id="basic-nav-dropdown">
+              <NavDropdown className='fs-3' title="Mer" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="/action/3.1">
                   Action
                 </NavDropdown.Item>
