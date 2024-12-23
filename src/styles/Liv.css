@@ -6,6 +6,12 @@
     z-index: 1000;
 }
 
+.logo {
+    width: 50px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add spacing between the logo and text */
+}
+
 .hero-section {
     background-image: url('/src/res/brygge_bilde.jpg');
     background-size: cover;

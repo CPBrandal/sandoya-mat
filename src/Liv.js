@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; // import needed for grid columns
 import kilen3 from './res/kilen3.jpg';
 import kilen4 from './res/kilen4.jpg';
+import logo from './res/livPng.png';
 import './styles/Liv.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,9 +22,9 @@ export function Liv() {
         <Container>
           {/* Replace href with as={Link} + to */}
           <Navbar.Brand className='fs-1' as={Link} to="/">
-            Sandøya Mat
+          <img src={logo} alt="logo" className="logo" />
+            Liv på bryggekanten
           </Navbar.Brand>
-
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-3">
