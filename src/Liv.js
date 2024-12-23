@@ -33,8 +33,8 @@ export function Liv() {
                 Sandøya Mat
               </Nav.Link>
               <NavDropdown className="fs-3" title="Mer" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/action/3.1">
-                  Action
+                <NavDropdown.Item as={Link} to="/meny">
+                  Meny
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/action/3.2">
                   Another action

@@ -4,6 +4,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './Home';
 import { Liv } from './Liv';
+import { Meny } from './Meny';
 
 function Navigation() {
   return (
@@ -14,6 +15,8 @@ function Navigation() {
 
         {/* "Liv" page at /liv */}
         <Route path="/liv" element={<Liv />} />
+
+        <Route path="/meny" element={<Meny />} />
       </Routes>
     </>
 
