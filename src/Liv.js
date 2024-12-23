@@ -18,45 +18,32 @@ export function Liv() {
     <div>
       <div className='liv-nav'>
 
-        {/* Top Nav Bar */}
-        <Navbar
-          expand="lg"
-          className="bg-body-tertiary border-bottom border-2 border-body-secondary"
-        >
-          <Container>
-            <Navbar.Brand className="fs-1" as={Link} to="/liv">
-              Liv på Bryggekanten
-            </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto gap-3">
+              <Nav.Link className="fs-3" as={Link} to="/">
+                Sandøya Mat
+              </Nav.Link>
+              <NavDropdown className="fs-3" title="Mer" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/meny">
+                  Meny
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/action/3.3">
+                  Something
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item as={Link} to="/action/3.4">
+                  Separated link
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto gap-3">
-                <Nav.Link className="fs-3" as={Link} to="/">
-                  Vår meny
-                </Nav.Link>
-                <Nav.Link className="fs-3" as={Link} to="/">
-                  Sandøya Mat
-                </Nav.Link>
-                <NavDropdown className="fs-3" title="Mer" id="basic-nav-dropdown">
-                  <NavDropdown.Item as={Link} to="/action/3.1">
-                    Action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to="/action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to="/action/3.3">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item as={Link} to="/action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </div>
 
       <div className='hero-section'>
         <div className='hero-content'>
