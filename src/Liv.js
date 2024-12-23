@@ -5,12 +5,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; // import needed for grid columns
 import kilen3 from './res/kilen3.jpg';
 import kilen4 from './res/kilen4.jpg';
-import styles from './styles/Liv.css'
-
+import './styles/Liv.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function Liv() {
@@ -60,6 +60,15 @@ export function Liv() {
 
       <div className='hero-section'>
         <div className='hero-content'>
+          <h1>Velkommen til Liv på bryggekanten</h1>
+          <Container className='button-container'>
+            <Button as={Link} to="/" className="hero-menu-button">
+              Se vår meny
+            </Button>
+            <Button as={Link} to="/" className="hero-menu-button">
+              Bestill bord hos oss
+            </Button>
+          </Container>
         </div>
       </div>
 
