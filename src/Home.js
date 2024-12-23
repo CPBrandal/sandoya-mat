@@ -6,13 +6,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './styles/Home.css';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function Home() {
   return (
-    <div className="Home">
+    <>
+    <div className="Home-nav">
       <Navbar expand="lg" className="bg-body-tertiary border-bottom border-2 border-body-secondary">
         <Container>
           {/* Replace href with as={Link} + to */}
@@ -51,7 +53,11 @@ export function Home() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    
     </div>
+    <div className="Home-content">
+      <h2>Sandøya Mat</h2>
+      <p>This is some content for the Home page.</p>
+    </div>
+    </>
   );
 }

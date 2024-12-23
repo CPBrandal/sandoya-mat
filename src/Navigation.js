@@ -1,9 +1,9 @@
 // App.js
+
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './Home';
 import { Liv } from './Liv';
-import Footer from './component/Footer';
 
 function Navigation() {
   return (
@@ -21,3 +21,5 @@ function Navigation() {
 }
 
 export default Navigation;
+
+
