@@ -1,6 +1,7 @@
 // Liv.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -18,45 +19,45 @@ export function Liv() {
   return (
     <div>
       <div className='liv-nav'>
-      <Navbar expand="lg" className="bg-body-tertiary border-bottom border-2 border-body-secondary">
-        <Container>
-          {/* Replace href with as={Link} + to */}
-          <Navbar.Brand className='fs-1' as={Link} to="/">
-          <img src={logo} alt="logo" className="logo" />
-            Liv på bryggekanten
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto gap-3">
-              {/* Home link */}
+        <Navbar expand="lg" className="bg-body-tertiary border-bottom border-2 border-body-secondary">
+          <Container>
+            {/* Replace href with as={Link} + to */}
+            <Navbar.Brand className='fs-1' as={Link} to="/">
+              <img src={logo} alt="logo" className="logo" />
+              Liv på bryggekanten
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto gap-3">
+                {/* Home link */}
 
 
-              {/* Liv link */}
-              <Nav.Link className='fs-3' as={Link} to="/liv">
-                Liv på Brygga
-              </Nav.Link>
+                {/* Liv link */}
+                <Nav.Link className='fs-3' as={Link} to="/liv">
+                  Liv på Brygga
+                </Nav.Link>
 
-              {/* Dropdown items */}
-              <NavDropdown className='fs-3' title="Mer" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/meny">
-                  Meny
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to="/action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
+                {/* Dropdown items */}
+                <NavDropdown className='fs-3' title="Mer" id="basic-nav-dropdown">
+                  <NavDropdown.Item as={Link} to="/meny">
+                    Meny
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/action/3.2">
+                    Another action
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/action/3.3">
+                    Something
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item as={Link} to="/action/3.4">
+                    Separated link
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </div>
 
       <div className='hero-section'>
         <div className='hero-content'>
@@ -109,11 +110,16 @@ export function Liv() {
             {/* Right Column for Text */}
             <Col xs={12} md={6}>
               {/* If in public folder: */}
-              <img
-                src={kilen4}
-                alt="Kilen 4"
-                className="img-fluid shadow" // makes the image responsive
-              />
+              <LoadScript googleMapsApiKey="AIzaSyC9897nVvIEFbL-Z5NGUOg9GRbFlQf2TfM">
+                <GoogleMap
+                  mapContainerStyle={{ height: "400px", width: "100%" }}
+                  center={{ lat: 58.59799015443375, lng: 9.060854902953158 }} // Center the map
+                  zoom={13}
+                >
+                  <Marker position={{  lat: 58.59799015443375, lng: 9.060854902953158 }} /> {/* Marker */}
+                </GoogleMap>
+              </LoadScript>
+
             </Col>
           </Row>
         </Container>
