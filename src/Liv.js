@@ -24,13 +24,16 @@ export function Liv() {
           className="bg-body-tertiary border-bottom border-2 border-body-secondary"
         >
           <Container>
-            <Navbar.Brand className="fs-1" as={Link} to="/">
-              Liv på Brygga
+            <Navbar.Brand className="fs-1" as={Link} to="/liv">
+              Liv på Bryggekanten
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto gap-3">
+                <Nav.Link className="fs-3" as={Link} to="/">
+                  Vår meny
+                </Nav.Link>
                 <Nav.Link className="fs-3" as={Link} to="/">
                   Sandøya Mat
                 </Nav.Link>
@@ -54,50 +57,60 @@ export function Liv() {
           </Container>
         </Navbar>
       </div>
-      <Container className="my-5">
-        <Row className="align-items-center" style={{ minHeight: '400px' }}>
-          <Col xs={12} md={6}>
-            <img
-              src={kilen3}
-              alt="Kilen 3"
-              className="img-fluid shadow"
-            />
-          </Col>
-          <Col xs={12} md={6}>
-            <h2>Liv på Brygga</h2>
-            <p>
-              På terrassen ved Sandøya Mat rett ved Sandøykilen, har det i årevis blitt servert god mat og godt drikke med sjøen som nærmeste nabo.
-              Det tenker vi å fortsette med. “Liv på Bryggekanten” kaller vi det nye tilskuddet til øya.
-              Restauranten drives av samme eiere som butikken, og med oss på laget har vi fått Lotta Røstad som flyttet til Sandøya for et par år siden.
-              Lotta har lang fartstid i “bransjen”, er svensk og vil nok sørge for at det også gjenspeiles i menyen.
-              Sammen brenner vi for å gjøre både Liv på Bryggekanten og butikken til øyas naturlige samlingssted, sommer som vinter.
-            </p>
-          </Col>
-        </Row>
-      </Container>
 
-      <Container className="mt-4">
-        <Row>
-          {/* Left Column for Image */}
-          <Col xs={12} md={6}>
-            <h2>Liv på Brygga</h2>
-            <p>
-              This is some content for the Liv page. You can add more text,
-              descriptions, or anything you’d like here.
-            </p>
-          </Col>
+      <div className='hero-section'>
+        <div className='hero-content'>
+        </div>
+      </div>
 
-          {/* Right Column for Text */}
-          <Col xs={12} md={6}>
-            {/* If in public folder: */}
-            <img
-              src={kilen4}
-              alt="Kilen 4"
-              className="img-fluid shadow" // makes the image responsive
-            />
-          </Col>
-        </Row>
-      </Container>
+      <div className='content-section'>
+        <Container className="my-5">
+          <Row className="align-items-center" style={{ minHeight: '400px' }}>
+            <Col xs={12} md={6}>
+              <img
+                src={kilen3}
+                alt="Kilen 3"
+                className="img-fluid shadow"
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <h2>Liv på Brygga</h2>
+              <p>
+                På terrassen ved Sandøya Mat rett ved Sandøykilen, har det i årevis blitt servert god mat og godt drikke med sjøen som nærmeste nabo.
+                Det tenker vi å fortsette med. “Liv på Bryggekanten” kaller vi det nye tilskuddet til øya.
+                Restauranten drives av samme eiere som butikken, og med oss på laget har vi fått Lotta Røstad som flyttet til Sandøya for et par år siden.
+                Lotta har lang fartstid i “bransjen”, er svensk og vil nok sørge for at det også gjenspeiles i menyen.
+                Sammen brenner vi for å gjøre både Liv på Bryggekanten og butikken til øyas naturlige samlingssted, sommer som vinter.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+
+        <Container className="mt-4">
+          <Row>
+            {/* Left Column for Image */}
+            <Col xs={12} md={6}>
+              <h2>Liv på Brygga</h2>
+              <p>
+                This is some content for the Liv page. You can add more text,
+                descriptions, or anything you’d like here.
+              </p>
+            </Col>
+
+            {/* Right Column for Text */}
+            <Col xs={12} md={6}>
+              {/* If in public folder: */}
+              <img
+                src={kilen4}
+                alt="Kilen 4"
+                className="img-fluid shadow" // makes the image responsive
+              />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+
     </div>
   );
 }
