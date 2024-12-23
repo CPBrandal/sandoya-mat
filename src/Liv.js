@@ -37,8 +37,8 @@ export function Liv() {
 
               {/* Dropdown items */}
               <NavDropdown className='fs-3' title="Mer" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/action/3.1">
-                  Action
+                <NavDropdown.Item as={Link} to="/meny">
+                  Meny
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/action/3.2">
                   Another action
@@ -61,7 +61,7 @@ export function Liv() {
         <div className='hero-content'>
           <h1>Velkommen til Liv på bryggekanten</h1>
           <Container className='button-container'>
-            <Button as={Link} to="/" className="hero-menu-button">
+            <Button as={Link} to="/meny" className="hero-menu-button">
               Se vår meny
             </Button>
             <Button as={Link} to="/" className="hero-menu-button">
