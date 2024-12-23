@@ -17,16 +17,28 @@ export function Liv() {
   return (
     <div>
       <div className='liv-nav'>
+      <Navbar expand="lg" className="bg-body-tertiary border-bottom border-2 border-body-secondary">
+        <Container>
+          {/* Replace href with as={Link} + to */}
+          <Navbar.Brand className='fs-1' as={Link} to="/">
+            Sandøya Mat
+          </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-3">
-              <Nav.Link className="fs-3" as={Link} to="/">
-                Sandøya Mat
+              {/* Home link */}
+
+
+              {/* Liv link */}
+              <Nav.Link className='fs-3' as={Link} to="/liv">
+                Liv på Brygga
               </Nav.Link>
-              <NavDropdown className="fs-3" title="Mer" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/meny">
-                  Meny
+
+              {/* Dropdown items */}
+              <NavDropdown className='fs-3' title="Mer" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/action/3.1">
+                  Action
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/action/3.2">
                   Another action
@@ -43,7 +55,7 @@ export function Liv() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
+    </div>
 
       <div className='hero-section'>
         <div className='hero-content'>
