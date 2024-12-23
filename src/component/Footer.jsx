@@ -7,7 +7,6 @@ function Footer() {
     return (
         <footer
             style={{
-                position: 'sticky',
                 bottom: 0,
                 width: '100%',
                 backgroundColor: '#333',
