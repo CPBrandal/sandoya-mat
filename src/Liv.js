@@ -22,7 +22,7 @@ export function Liv() {
         <Navbar expand="lg" className="bg-body-tertiary border-bottom border-2 border-body-secondary">
           <Container>
             {/* Replace href with as={Link} + to */}
-            <Navbar.Brand className='fs-1' as={Link} to="/">
+            <Navbar.Brand className='fs-1' as={Link} to="/liv">
               <img src={logo} alt="logo" className="logo" />
               Liv på bryggekanten
             </Navbar.Brand>
@@ -31,10 +31,9 @@ export function Liv() {
               <Nav className="ms-auto gap-3">
                 {/* Home link */}
 
-
                 {/* Liv link */}
-                <Nav.Link className='fs-3' as={Link} to="/liv">
-                  Liv på Brygga
+                <Nav.Link className='fs-3' as={Link} to="/">
+                  Sandøya Mat
                 </Nav.Link>
 
                 {/* Dropdown items */}
@@ -43,14 +42,10 @@ export function Liv() {
                     Meny
                   </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/action/3.2">
-                    Another action
+                    Ros og ris
                   </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/action/3.3">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item as={Link} to="/action/3.4">
-                    Separated link
+                    Kontakt oss
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
@@ -100,11 +95,24 @@ export function Liv() {
           <Row>
             {/* Left Column for Image */}
             <Col xs={12} md={6}>
-              <h2>Liv på Brygga</h2>
+              <h2>Finn oss</h2>
+
               <p>
-                This is some content for the Liv page. You can add more text,
-                descriptions, or anything you’d like here.
+                Velkommen til Liv på Bryggekanten! Vi holder til på: <br />
+                <strong>Strandaveien 16, 4915 Vestre Sandøya</strong>
               </p>
+              <p>
+                Liv på bryggekanten tilbyr ledige bryggeplasser for deg som kommer med båt.
+              </p>
+              <p>
+                Du kan også reise med rutebåt via Agder Kollektivtrafikk (<a href="https://akt.no" target="_blank">akt.no</a>) eller bestille taxibåt på telefon <strong>957 44 500</strong>.
+              </p>
+              <h3>Åpningstider:</h3>
+              <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                <li><strong>Mandag - Lørdag:</strong> 11:00 - 21:00</li>
+  
+                <li><strong>Søndag:</strong> 12:00 - 20:00</li>
+              </ul>
             </Col>
 
             {/* Right Column for Text */}
@@ -112,14 +120,15 @@ export function Liv() {
               {/* If in public folder: */}
               <LoadScript googleMapsApiKey="AIzaSyC9897nVvIEFbL-Z5NGUOg9GRbFlQf2TfM">
                 <GoogleMap
-                  mapContainerStyle={{ height: "400px", width: "100%" }}
+                  mapContainerStyle={{ height: "400px", width: "100%", borderRadius: '10px'
+                  }}
                   center={{ lat: 58.59799015443375, lng: 9.060854902953158 }} // Center the map
                   zoom={13}
+                  mapTypeId='hybrid'
                 >
-                  <Marker position={{  lat: 58.59799015443375, lng: 9.060854902953158 }} /> {/* Marker */}
+                  <Marker position={{ lat: 58.59799015443375, lng: 9.060854902953158 }} /> {/* Marker */}
                 </GoogleMap>
               </LoadScript>
-
             </Col>
           </Row>
         </Container>

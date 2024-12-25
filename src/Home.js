@@ -30,7 +30,7 @@ export function Home() {
 
               {/* Liv link */}
               <Nav.Link className='fs-3' as={Link} to="/liv">
-                Liv på Brygga
+                Liv på Bryggekanten
               </Nav.Link>
 
               {/* Dropdown items */}
